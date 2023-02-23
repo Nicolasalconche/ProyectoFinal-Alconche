@@ -1,0 +1,44 @@
+[
+    {
+        "id": 1,
+        "modelo": "Estante",
+        "tipo": "Shelf1",
+        "precio": 2800,
+        "imagen": "mueble1.jpg"
+    },
+    {
+        "id": 2,
+        "modelo": "Estante",
+        "tipo": "Shelf2",
+        "precio": 2800,
+        "imagen": "mueble2.jpg"
+    },
+    {
+        "id": 3,
+        "modelo": "Estante",
+        "tipo": "Shelf3",
+        "precio": 2000,
+        "imagen": "mueble3.jpg"
+    },
+    {
+        "id": 4,
+        "modelo": "Estante",
+        "tipo": "Shelf4",
+        "precio": 2500,
+        "imagen": "mueble4.jpg"
+    },
+    {
+        "id": 5,
+        "modelo": "Estante",
+        "tipo": "Shelf5",
+        "precio": 2800,
+        "imagen": "mueble5.jpg"
+    },
+    {
+        "id": 6,
+        "modelo": "Estante",
+        "tipo": "Shelf6",
+        "precio": 2500,
+        "imagen": "mueble6.jpg"
+    }
+]

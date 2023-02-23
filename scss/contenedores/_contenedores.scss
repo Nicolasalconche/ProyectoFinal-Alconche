@@ -1,0 +1,225 @@
+header{
+    .h1{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between; 
+        align-items: center;
+        font-size: 50px;
+        color: rgba(175, 155, 41, 0.815);
+    }
+    
+    .navegacion{   
+        font-size: 1.3rem;
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-evenly;
+        list-style: none;
+    }
+
+    .navegador{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+}
+
+main{
+    .main{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-items: baseline;
+    }
+    
+    .main-1{
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        align-items: baseline;
+    }
+    
+    .subrayado{
+        text-align: center;
+        text-decoration: underline;
+    }
+    
+    #titulo1{
+        display: flex;
+        flex-direction: column;
+        font-size: 0.9rem;
+        width: 50%;
+        margin: 20px;
+        margin-top: 40px;
+    }
+    
+    .card{
+        margin-bottom: 100px;
+    }
+
+    .imagenn{
+        width: 290px;
+        height: 290px;
+        margin: 5px;
+        border: solid #CFD2CF 2px;
+        
+    }
+    
+    .productos{
+        display: flex;
+        width: 100%;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        margin-top: 100px;
+    }
+
+    #iframe{
+        width: 100%;
+        margin-bottom: 40px;
+    }
+
+    .productos-1{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        margin-top: 40px;
+    }
+    
+    .productos-tamaño{
+        border: solid;
+        margin: 20px;
+        width: 270px;
+        height: 300px;
+    }
+    
+    .productos-descripcion{
+        display: flex;
+        text-decoration: underline;
+        font-weight: bold;
+        margin-left: 120px;
+        align-items: center;
+    }
+    
+    .productos-descripcion-2{
+        display: flex;
+        margin-left: 120px;
+        align-items: center;
+        font-weight: bold;
+    }
+    
+    .contenedor{
+        display: flex;
+        flex-direction: row; 
+         
+    }
+
+    .links{
+        display: flex;
+        flex-direction: column;
+    }
+
+    #contenido{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+    }
+
+    .btn{
+        border-radius: 0;
+    }
+    
+    #botones{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        //align-items: center;
+    }
+    
+    #btnProductos, #btnContacto, #btnUbicacion, #btnVideos, #btnGaleria{
+        width: 300px;
+        height: 100px;
+        margin-bottom: 30px;
+        margin-top: 30px;
+        padding: 10px;
+        box-sizing: border-box;
+        border: solid 1px;
+        border-radius: 50px;
+        background-color: rgba(44, 134, 86, 0.568);
+        color: white;
+        a:hover{
+            background-color: rgb(255, 255, 255); 
+        }
+    }
+    
+    #btnProductos:hover, #btnContacto:hover, #btnUbicacion:hover,#btnVideos:hover,#btnGaleria:hover, #reiniciar:hover{
+        background-color: aqua;
+    }
+    
+    #rei{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    #reiniciar{
+        width: 250px;
+        height: 50px;
+        margin-bottom: 10px;
+        margin-top: 10px;
+        padding: 10px;
+        box-sizing: border-box;
+        border: solid 1px;
+        border-radius: 20px;
+        background-color: black;
+        color: white;
+        a:hover{
+            background-color: rgb(255, 255, 255); 
+    }
+    }
+}
+
+
+
+footer{
+    
+    padding-bottom: 40px ;
+
+    .footer{
+        
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        align-items: center;
+    }
+    
+    .iconos-sociales img{ 
+        transition:all 0.5s ease-out; border-radius:50px;
+
+        
+    }
+    
+    .iconos-sociales img:hover{
+        box-shadow: 0px 1px 1px 1px rgba(0, 0, 0, 0.1);
+        transform:translate(0px, -10px); 
+    }
+
+    #acomodar{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+     }
+    
+     #piePagina{
+        margin-top: 40px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        flex-wrap: wrap;
+      }
+}
+

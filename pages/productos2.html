@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Productos que tenemos en stock">
+        <meta name="keywords" content="venta, productos, muebles, diseños, precios">
+        <title>Productos | Stuff</title>
+        <link rel="stylesheet" href="../bs/bootstrap-5.2.2-dist/css/bootstrap.css">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" rel="stylesheet" />
+        <link rel="stylesheet" href="../scss/style.css">
+        <link rel="icon" type="image/jpg" href="../assets/imagenes/favicon.ico"/>
+        <enlace rel="preconectar" href="https://fonts.googleapis.com">
+        <enlace rel="preconectar" href="https://fonts.gstatic.com" crossorigin>
+        <enlace href="https: //fonts.googleapis.com/css2? family= Noto+Sans+Mono:wght@300;500 & display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <header>
+            <section class="color">
+              <div class="navegador">
+                <h1 class="h1"><a href="./productos2.html"><img class="logo" src="../assets/imagenes/free_horizontal_on_white_by_logaster (2).png" alt=""></a></h1>             
+                  <div class="col-3">                                     
+                    <div id="fecha"></div>
+                  </div>     
+              </div>  
+                <nav class="navbar navbar-expand-lg bg-light">
+                    <div class="container-fluid">
+                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+                            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                                <li class="nav-item">
+                                    <a class="nav-link active" aria-current="page" href="../index.html">Inicio</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="../pages/productos2.html">Productos</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </nav>
+            </section>
+            <nav class="navbar navbar-expand-lg navbar-dark bg-dark" id="nav">
+              <div class="container-fluid">
+                <a class="navbar-brand" href="#"></a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon "></span>
+                </button>
+            
+                <div class="collapse navbar-collapse" id="navbarColor01">
+                  <ul class="navbar-nav me-auto">
+                    <form class="d-flex">
+                      <input id="buscador"class="form-control me-2" placeholder="Búsqueda por modelo/tipo" aria-label="Search">
+                      <button id="btnBuscar" class="btn btn-outline-success">Buscar</button>
+                    </form>                     
+                  </ul>
+                  <ul>
+                    <select id="ordenProductos" class="form-select form-select-sm" aria-label=".form-select-sm example">
+                      <option selected>Ordenar por:</option>
+                      <option value="1">Mayor a menor</option>
+                      <option value="2">Menor a mayor</option>
+                      <option value="3">Alfabeticamente</option>
+                    </select>
+                  </ul>
+                  <ul style="list-style: none;"className="navbar-nav me-auto">  
+                    <li className="nav-item " >
+                        <a id="botonCarrito" data-bs-toggle="modal" data-bs-target="#idModalCarrito" class="btn btn-secondary"><i class="fas fa-shopping-cart fa-1x"></i></a>
+                    </li>
+                </ul>                 
+                </div>
+                <div>                    
+                </div>
+              </div> 
+            </nav>     
+        </header>
+        <main>
+          <section class="boton" id="botones">
+            <div>
+              <button class="bi-menu-app fs-1 " id="btnProductos"> Productos</button>
+            </div>
+            <div>
+              <button class="bi-laptop fs-1 " id="btnContacto"> Contacto</button>
+            </div>
+            <div>
+              <button class="bi-map fs-1 " id="btnUbicacion"> Ubicación</button>
+            </div>
+            <div>
+              <button class="bi-camera fs-1 " id="btnGaleria"> Galeria</button>
+            </div>
+            <div>
+              <button class="bi-tablet fs-1 " id="btnVideos"> Videos</button>
+            </div>
+          </section>  
+              <div class="container m-4" id="btnAgregar">
+                <div class="row">          
+                    <div class="col-3">     
+                      <button id="agregarMueble" data-bs-toggle="modal" data-bs-target="#idModalAgregarMueble" class="btn btn-success">Agregar Mueble</button>                         
+                  </div>
+                </div>   
+              </div>                       
+              <div class="container" id="productos">
+                <div id="encontrado"></div>
+                <div id="muebles" class="row"></div>    
+              </div>
+              <div id="ubicacion"></div> 
+              <div id="videos"></div> 
+              <div id="galeria"></div>              
+                <section class="contact" id="contacto">
+                  <div class="u-wrapper">
+                    <div class="contact-content">
+                      <form id="form" class="form" action="https://formspree.io/f/moqbrrdn" method="POST">
+                        <h3 class="tag"><span>CONSULTANOS</span></h3>
+                        <label for="name">Nombre Completo <span>*</span></label>
+                        <input name="name" required type="text" id="name" placeholder="Nombre y Apellido">
+                        <label for="email">Correo electrónico <span>*</span></label>
+                        <input name="email" type="text" id="email" required placeholder="usuario@gmail.com">
+                        <label for="message">Consultas y dudas:</label>
+                        <textarea id="message" name="message" id="" cols="30" rows="10"></textarea>
+                        <button type="submit" class="btn primary full" id="btn">enviar mensaje</button>
+                      </form>
+                    </div>
+                  </div>
+                </section>
+              <div id="rei">
+                <a href="#inicio"><button id="reiniciar">Volver</button></a>
+              </div>       
+              <div class="modal fade" id="idModalAgregarMueble" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title" id="exampleModalLabel">Agregar Mueble</h5>
+                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body" id="modal-body">
+                      <form id="añadirMueble">
+                        <div class="mb-3">
+                          <label for="modelo" class="form-label">Modelo</label>
+                          <input type="text" class="form-control" id="tipoInput" aria-describedby="modelo">
+                          
+                        </div>
+                        <div class="mb-3">
+                          <label for="tipo" class="form-label">Tipo</label>
+                          <input type="text" class="form-control" id="modeloInput" aria-describedby="tipo">              
+                        </div>
+                        <div class="mb-3">
+                          <label for="precio" class="form-label">Precio:</label>
+                          <input type="text" class="form-control" id="precioInput" aria-describedby="precio">
+                        </div>
+                      </form>
+                    </div>
+                    
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                      <button type="text" id="guardarMuebleBtn" class="btn btn-success" data-bs-dismiss="modal">Guardar Mueble</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="modal fade" id="idModalCarrito" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title" id="exampleModalLabel">Carrito de compras</h5>
+                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body" id="carrito">
+                      
+                    </div>
+                    <div class="row ml-ato">
+                      <p id="totalCompra"></p>
+                    </div>
+                    <div class="modal-footer">  
+                      <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                      <button type="button" data-bs-dismiss="modal" class="btn btn-success" id="botonFinalizarCompra">Finalizar Compra</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+          <div>
+            <a href="https://api.whatsapp.com/send?phone=543816049091" class="btn-wsp" target="_blank">
+                <i class="bi-whatsapp fs-1" ></i>
+            </a>
+          </div>
+        </main>
+        <footer> 
+                <div class="container px-4 px-lg-5">
+                  <h2 class="text-center mt-0">Información</h2>
+                  <hr class="divider" />
+                  <div class="row gx-4 gx-lg-5" id="acomodar">
+                      <div class="col-lg-3 col-md-6 text-center">
+                          <div class="mt-5">
+                              <div class="mb-2"><i class="bi-map fs-1 text-primary"></i></div>
+                              <h3 class="h4 mb-2">Ubicación</h3>
+                              <p class="text-muted mb-0">Tucumán, Argentina.</p>
+                          </div>
+                      </div>
+                      <div class="col-lg-3 col-md-6 text-center">
+                          <div class="mt-5">
+                              <a href="https://www.facebook.com/profile.php?id=100075630026476&is_tour_dismissed=true"><div class="mb-2"><i class="bi-facebook fs-1 text-primary"></i></div></a>
+                              <h3 class="h4 mb-2">Facebook</h3>
+                          </div>
+                      </div>
+                      <div class="col-lg-3 col-md-6 text-center">
+                        <div class="mt-5">
+                            <a href="https://www.instagram.com/stufftucuman/"><div class="mb-2"><i class="bi-instagram fs-1 text-primary"></i></div></a>
+                            <h3 class="h4 mb-2">Instagram</h3>
+               
+                        </div>
+                      </div>
+                  </div>
+                </div>
+              <div id="piePagina">
+              <div class="container px-4 px-lg-5"><div class="small text-center text-muted">Copyright &copy; 2023 - Nicolás Alconché</div>
+              <a href="https://www.freepik.es/"><div class="container px-4 px-lg-5"><div class="small text-center text-muted">Imagenes de Freepik</div></a>
+              </div>
+              </div>
+        </footer>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous">
+        </script>
+        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+        <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/luxon@2.3.0/build/global/luxon.min.js"></script>
+        <script src="../bs/bootstrap-5.2.2-dist/js/bootstrap.bundle.js"></script>
+        <script src="../js/main.js"></script>          
+    </body>
+</html>   
