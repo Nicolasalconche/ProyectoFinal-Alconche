@@ -61,7 +61,7 @@ if(ordenProductos.value == 1){
 }else if(ordenProductos.value == 2){
     ordenarMenorMayor(deposito)
 }else if(ordenProductos.value == 3){
-    ordenarAlfabeticamenteTipo(deposito)
+    ordenarAlfabeticamente(deposito)
 }else{
     mostrarMuebles(deposito)
 }
@@ -253,7 +253,7 @@ function cargarProductosCarrito(array){
         carrito.innerHTML +=
         `
         <div class="card border-primary mb-3" id ="productoCarrito${productoEnCarrito.id}" style="max-width: 540px;">
-                 <img class="card-img-top" height="300px" src="../assets/${productoEnCarrito.imagen}" alt="">
+                 <img class="card-img-top" style="height: 300px;" src="../assets/${productoEnCarrito.imagen}" alt="">
                  <div class="card-body">
                         <h4 class="card-title">${productoEnCarrito.tipo}</h4>
                     
@@ -289,11 +289,11 @@ function agregarAlCarrito(mueble){
         localStorage.setItem("carrito", JSON.stringify(productosEnCarrito))
 
         Swal.fire({
-            title: 'Usted agrego un nuevo mueble',
+            title: 'Usted agrego al carrito un nuevo mueble',
             text: `El modelo ${mueble.tipo} de tipo ${mueble.modelo} ha sido agregado`,
             icon: "success",
             confirmButtonColor: "green",
-            confirmButtonText: "Gracias!",
+            confirmButtonText: "Ok!",
             timer: 3000,
             imageUrl: `assets/${mueble.imagen}`,
             imageHeight: 200
@@ -313,10 +313,10 @@ function agregarAlCarrito(mueble){
 
 function finalizarCompra(){
     Swal.fire({
-        title: 'Está seguro de realizar la compra',
+        title: 'Está seguro que desea realizar la compra',
         icon: 'info',
         showCancelButton: true,
-        confirmButtonText: 'Sí, seguro',
+        confirmButtonText: 'Sí, estoy seguro',
         cancelButtonText: 'No, no quiero',
         confirmButtonColor: 'green',
         cancelButtonColor: 'red',
@@ -326,7 +326,7 @@ function finalizarCompra(){
                 title: 'Compra realizada',
                 icon: 'success',
                 confirmButtonColor: 'green',
-                text: `Muchas gracias por su compra ha adquirido nuestros productos. `,
+                text: `Muchas gracias por su compra. `,
                 })
                 productosEnCarrito = []
                 localStorage.removeItem("carrito")
@@ -334,7 +334,7 @@ function finalizarCompra(){
             Swal.fire({
                 title: 'Compra no realizada',
                 icon: 'error',
-                text: `La compra no ha sido realizada! Atención sus productos siguen en el carrito`,
+                text: `La compra no ha sido realizada! Atención los productos siguen en el carrito`,
                 confirmButtonColor: 'green',
                 timer:3500
             })
@@ -394,7 +394,7 @@ function ordenarMayorMenor(arr){
     verMuebles(mayorMenor)
 }
 
-function ordenarAlfabeticamenteTipo(array){
+function ordenarAlfabeticamente(array){
     const ordenadoAlfabeticamente = [].concat(array)
      ordenadoAlfabeticamente.sort((a,b) => {
           if(a.tipo > b.tipo) {
@@ -423,7 +423,7 @@ function ordenarMayorMenor(arr){
     mostrarMuebles(mayorMenor)
 }
 
-function ordenarAlfabeticamenteTipo(array){
+function ordenarAlfabeticamente(array){
     const ordenadoAlfabeticamente = [].concat(array)
     ordenadoAlfabeticamente.sort((a,b) => {
         if(a.tipo > b.tipo) {
@@ -453,7 +453,7 @@ function ordenar(array){
             ordenarMayorMenor(array)
         break
         case 3:
-            ordenarAlfabeticamenteTipo(array)
+            ordenarAlfabeticamente(array)
         break
         default:
             
