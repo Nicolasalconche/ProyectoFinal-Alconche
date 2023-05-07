@@ -1,0 +1,143 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Noto Sans Mono', monoespaciado;;
+}
+
+.logo{
+  width: 50px;
+  height: 50px;
+  margin-right: 40px;
+}
+
+.logo2{
+  height: 80px;
+  width: 80px;
+}
+
+.carro{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  
+}
+
+.navbar{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  background: rgb(0,38,173);
+background: linear-gradient(340deg, rgba(0,38,173,1) 8%, rgba(255,255,255,1) 73%);
+}
+
+.lista{
+  display: flex;
+  color: white;
+  flex-direction: row;
+  justify-content: space-evenly;
+  margin: 0px;
+}
+
+.list{
+  margin: 10px;
+}
+
+.saludo{
+  margin-top: 50px ;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.color{
+  color: white;
+}
+
+.carrito{
+  width: 100px;
+  display: flex;
+  flex-direction: row;
+  border-radius: 50px;
+  margin-left: 30px;
+  gap: 4px;
+}
+
+.numero{
+  color: rgb(0, 0, 0);
+  font-size: large;
+}
+
+.body{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap ;
+  justify-content: center;
+  gap: 50px;
+}
+
+.tarjeta{
+  background-color: grey;
+  border: solid 1px;
+  margin: 40px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.contenido{
+  display: flex;
+  flex-direction: column;
+  
+}
+
+.buscador{
+  display: flex;
+  border: solid 1px;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.loader {
+  display: block;
+  --height-of-loader: 4px;
+  --loader-color: #0071e2;
+  width: 130px;
+  height: var(--height-of-loader);
+  border-radius: 30px;
+  background-color: rgba(0,0,0,0.2);
+  position: relative;
+}
+
+.loader::before {
+  content: "";
+  position: absolute;
+  background: var(--loader-color);
+  top: 0;
+  left: 0;
+  width: 0%;
+  height: 100%;
+  border-radius: 30px;
+  animation: moving 1s ease-in-out infinite;
+  ;
+}
+
+@keyframes moving {
+  50% {
+    width: 100%;
+  }
+
+  100% {
+    width: 0;
+    right: 0;
+    left: unset;
+  }
+}
+
+.cargador{
+  display: flex;
+  margin-top: 30%;
+  justify-content: center;
+  align-items: center;
+}
