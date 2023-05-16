@@ -18,12 +18,22 @@ export const CartContextProvider = ({children}) => {
       }, [cartList])
 
     const agregarAlCarro = (nuevoProd)=>{
-        setCartList([
-            ...cartList,
-            nuevoProd
-            
-        ])
+
+        const indiceProductos = cartList.findIndex(producto => producto.id === nuevoProd.id)
+        if(indiceProductos === -1){
+            setCartList([
+                ...cartList,
+                nuevoProd
+            ])
+        } else {
+            cartList[indiceProductos].quantity += nuevoProd.quantity
+            setCartList([ ...cartList  ])
+        }
+
+        
     }
+
+    const cantidadTotal = () => cartList.reduce((cantidadTotal, objProducto) => cantidadTotal += objProducto.quantity ,0 )
 
 
     const vaciarCarrito= () =>{
@@ -40,6 +50,7 @@ export const CartContextProvider = ({children}) => {
             cartList,     
             agregarAlCarro,
             vaciarCarrito,
+            cantidadTotal,
             eliminarProducto
             
         }}>

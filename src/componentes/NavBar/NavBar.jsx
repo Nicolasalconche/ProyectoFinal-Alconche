@@ -1,8 +1,8 @@
 import { Link } from 'react-router-dom';
 import CartWidget from '../CartWidget.jsx/CartWidget';
+import { useCartContext } from '../../context/CartContext';
 
 function Navbar() {
-      
         return (
             <div>
                 <nav className='navbar'>
@@ -17,7 +17,7 @@ function Navbar() {
                 <li className='list'>
                    <Link to='/modelo/cajoneras' className='color'>Cajoneras</Link> 
                 </li>
-               </ul>   
+               </ul>  
                <CartWidget/>
                </nav>
             </div>
