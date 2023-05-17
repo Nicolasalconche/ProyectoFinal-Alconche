@@ -9,11 +9,16 @@ const ItemCount = ({initial=1, stock=10, min=5, onAdd }) => {
     }
 
   return (
-    <div>
-        <h2>Unidades: {contador}</h2>
-        <button onClick={increment}> + </button>
-        <button onClick={decrement}> - </button>
-        <button className="btn btn-outline-dark" onClick={handleOnAdd}> Agregar al carrito</button>
+    <div className="botones">
+        <div >
+            <h4>Unidades: {contador}</h4>
+          <button onClick={increment} className="botones-2"> + </button>
+          <button onClick={decrement}> - </button>
+        </div>
+        <div>
+          <button className="btn btn-outline-dark" onClick={handleOnAdd}> Agregar al carrito</button>
+        </div>
+        
     </div>
   )
 }

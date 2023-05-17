@@ -23,6 +23,11 @@
   
 }
 
+.mueble{
+  width: 300px;
+  height: 400px;
+}
+
 .navbar{
   display: flex;
   flex-direction: row;
@@ -79,17 +84,19 @@ background: linear-gradient(340deg, rgba(0,38,173,1) 8%, rgba(255,255,255,1) 73%
 .tarjeta{
   background-color: grey;
   border: solid 1px;
-  margin: 40px;
+  margin: 200px;
+  margin-top: 30px;
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
   align-items: center;
 }
 
-.contenido{
+.contenido2{
   display: flex;
-  flex-direction: column;
-  
+  flex-direction: column; 
+  align-items: flex-start;
+  margin: 50px;
+  gap: 30px;
 }
 
 .buscador{
@@ -140,4 +147,53 @@ background: linear-gradient(340deg, rgba(0,38,173,1) 8%, rgba(255,255,255,1) 73%
   margin-top: 30%;
   justify-content: center;
   align-items: center;
+}
+
+.formulario{
+  margin: 30px;
+  display: flex;
+  flex-direction: column;
+  
+  gap: 10px;
+}
+
+.form{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+.card-body{
+  display: flex;
+  flex-direction: column;
+}
+
+.botones{
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.botones-2{
+  margin-right: 5px;
+}
+
+.card-footer{
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.compra{
+  display: flex;
+  flex-direction: row;
+}
+
+.cartel{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 120px;
 }
