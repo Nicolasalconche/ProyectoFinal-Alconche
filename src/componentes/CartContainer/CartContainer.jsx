@@ -31,24 +31,6 @@ const CartContainer = () => {
 
         const db = getFirestore()
         const queryCollection = collection(db, 'orders')
-        
-        // const queryDoc = doc(db, 'productos', 'id')
-        // updateDoc(queryDoc, {
-        //   stock: 99
-        // })
-        // .finally(()=> console.log('Termino actualizar'))
-
-        // const queryCollection = collection(db, 'orders')
-        // const queryDoc1 = doc(queryCollection)
-        // const queryDoc2 = doc(queryCollection)
-        // const queryDoc3 = doc(queryCollection, 'id')
-
-        // const batch = writeBatch(db)
-
-        // batch.set(queryDoc1, {buyer: 'Nombre 1', items: [], total: 1500})
-        // batch.set(queryDoc2, {buyer: 'Nombre 2', items: [], total: 2500})
-        // batch.update(queryDoc3, {buyer: 'Nombre 3', items: [], total: 4500})
-        // batch.commit()
 
         addDoc(queryCollection, order)
           .then(resp => setId(resp.id))
@@ -111,13 +93,6 @@ const CartContainer = () => {
                     onChange={handleOnChange}
                     value={formData.email}
                 />    
-                {/* <input 
-                    type="text"
-                    name="repetir mail"
-                    placeholder="Ingrese el"
-                    onChange={()=>{}}
-                    value={''}
-                /> */}
                 <button className="btn btn-dark">Terminar Compra</button> 
                 <button className="btn btn-dark" onClick={vaciarCarrito}>Vaciar Carrito</button>   
               </form>
