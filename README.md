@@ -1,0 +1,1 @@
+El proyecto se trata de una tienda online de muebles a medida con diseños propios, cuenta con buscador, navegador con categorias, carrito de compras conectado a firebase, y compra funcional con identificación por id de compra.

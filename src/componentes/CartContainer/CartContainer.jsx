@@ -5,6 +5,9 @@ import { Link } from 'react-router-dom'
 
 
 const CartContainer = () => {
+
+      const [id, setId] = useState(null)
+
       const [formData, setFormData] = useState({
         name: '',
         phone: '',
@@ -48,7 +51,7 @@ const CartContainer = () => {
         // batch.commit()
 
         addDoc(queryCollection, order)
-          .then(resp => console.log(resp))
+          .then(resp => setId(resp.id))
           .catch(err => console.log(err))
           .finally(() => console.log(''))
           console.log(order)
@@ -64,9 +67,10 @@ const CartContainer = () => {
       }
 
       return (
-
+    
           cartList.length === 0 ?
           <div className="cartel">
+              {id && <h2 className="id">ID orden de compra es: {id}</h2>}
               <h2>No hay productos en el carrito</h2>
               <Link to='/'> Ir a ver productos</Link>
           </div>

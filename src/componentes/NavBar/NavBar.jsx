@@ -1,6 +1,5 @@
 import { Link } from 'react-router-dom';
 import CartWidget from '../CartWidget.jsx/CartWidget';
-import { useCartContext } from '../../context/CartContext';
 
 function Navbar() {
         return (
@@ -12,10 +11,10 @@ function Navbar() {
                   <Link to='/' className='color'> Inicio </Link>
                 </li>
                 <li className='list'>
-                   <Link to='/modelo/muebles' className='color'>Alacenas</Link> 
+                   <Link to='/modelo/muebles' className='color'>Shelf</Link> 
                 </li>
                 <li className='list'>
-                   <Link to='/modelo/cajoneras' className='color'>Cajoneras</Link> 
+                   <Link to='/modelo/cajoneras' className='color'>Eleven</Link> 
                 </li>
                </ul>  
                <CartWidget/>
